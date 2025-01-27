@@ -10,12 +10,66 @@
     <script>
       tailwind.config = {
         theme: {
-          extend: {},
+          maxWidth: {
+            screen: "1440px",
+          },
+          container: {
+            center: true,
+            padding: "2rem",
+          },
+          extend: {
+            fontSize: {
+              h1: "clamp(4rem, 5vw + 0.8rem, 8rem)",
+            },
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+            },
+            colors: {
+              eerieBlack: "#1C1C1C",
+              sonicSilver: "#777777",
+            },
+          },
         },
       };
     </script>
   </head>
-  <body>
-    <h1>Welcome to my tea house website</h1>
+  <body class="font-manrope">
+    <main class="max-w-screen container">
+      <!-- banner section start -->
+      <section
+        class="h-[60vh] flex flex-col lg:flex-row gap-[2rem] lg:gap-[0] items-center justify-between"
+      >
+        <div
+          class="flex-1 flex flex-col text-center lg:text-start items-center lg:items-start gap-[3rem]"
+        >
+          <h1 class="text-h1 w-[90%] lg:w-[85%] text-eerieBlack">
+            It's good tea time at The Tea House
+          </h1>
+          <p class="text-sonicSilver text-[18px] w-[90%] lg:w-[75%]">
+            Tea and Botanical Solutions Supplier Give Optimum Satisfaction To
+            Your Taste Buds.
+          </p>
+          <button
+            class="text-[2rem] font-bold px-[1.8rem] py-[1.3rem] bg-gradient-to-r from-[#FF8938] to-[#FF0000] text-white rounded-xl flex items-center gap-[1rem]"
+          >
+            Explore More
+            <img src="assets/arrow.png" alt="" />
+          </button>
+        </div>
+        <div class="flex-1 relative">
+          <img class="w-full" src="assets/banner.png" alt="banner image" />
+          <div
+            class="flex gap-[0.9rem] bg-white shadow-lg shadow-[rgba(0, 0, 0, 0.06)] p-[1rem] lg:p-[2rem] rounded-[1rem] absolute top-[80%] left-[15%] lg:left-[20%]"
+          >
+            <p class="text-[4rem]">🌟</p>
+            <div>
+              <h4 class="text-[3rem] font-semibold text-eerieBlack">5.00</h4>
+              <p class="text-[1.6rem] text-sonicSilver">Trust Pilot Ratings</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner section end -->
+    </main>
   </body>
 </html>
